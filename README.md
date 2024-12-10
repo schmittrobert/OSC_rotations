@@ -63,7 +63,8 @@ In the plugin that you want to control, click on the two circles and OSC at the 
 
 ## Run the project 
 
-Clone the plugin into the plugin folder of your project. In Unreal go to edit -> plugins and search for OSC_rotations. Set the check mark and restart your project.
+Clone the repo into the Plugins folder of your project. If there isn't one yet, simply create one directly in the project folder. In Unreal go to edit -> plugins and search for OSC_rotations. Set the check mark and restart your project. Place the VRPawn from the content Bowser in your scene/on your camera.
+To use the plugin with your own UI, copy the event graph from the TestUI into yours and adjust the On Pressed events.
 
 ## Troubleshooting
 
