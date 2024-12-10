@@ -3,9 +3,9 @@ This project serves to create an OSC connection between Unreal and Reaper. For t
 
 
 ## Software Requirements
-This project was created using
-Unreal Engine 5.3.2
-Reaper V7.26 with the IEM Plugins v1.3.0
+This project was created using:
+- Unreal Engine 5.3.2
+- Reaper V7.26 with the IEM Plugins v1.3.0
 
 
 ## Project structure
@@ -46,11 +46,11 @@ When called, the send track function receives an OSC client as a target, as well
 
 #### OSC Server
 
-To receive OSC messages in Reaper, go to Options -> Preferences -> Control/OSC/web and click on Add. Select OSC as Control surface mode, enter a device name, select Local port mode and enter the local port and the IP of the OSC client of Unreal that you want to listen to.
+To receive OSC messages in Reaper, go to *Options->Preferences->Control/OSC/web* and click on Add. Select OSC as Control surface mode, enter a device name, select Local port mode and enter the local port and the IP of the OSC client of Unreal that you want to listen to.
 
 #### Actions
 
-To be able to play a desired number of tracks exclusively, create new user-defined actions. To do this, go to Actions -> Show action list -> New action. Drag and drop from left to right, first the Track: Unmute all tracks and then the action Track: Toggle mute for track X for every track except the ones you want to be played (see image).
+To be able to play a desired number of tracks exclusively, create new user-defined actions. To do this, go to *Actions->Show action list->New action*. Drag and drop from left to right, first the Track: Unmute all tracks and then the action Track: Toggle mute for track X for every track except the ones you want to be played (see image).
 
 <p float="center">
   <img src="/Doc/Reaper_custom_action.png" width="500" />
@@ -63,7 +63,7 @@ In the plugin that you want to control, click on the two circles and OSC at the 
 
 ## Run the project 
 
-Clone the repo into the Plugins folder of your project. If there isn't one yet, simply create one directly in the project folder. In Unreal go to edit -> plugins and search for OSC_rotations. Set the check mark and restart your project. Place the VRPawn from the content Bowser in your scene/on your camera.
+Clone the repo into the Plugins folder of your project. If there isn't one yet, simply create one directly in the project folder. In Unreal go to *edit->plugins* and search for OSC_rotations. Set the check mark and restart your project. Place the VRPawn from the content Bowser in your scene/on your camera.
 To use the plugin with your own UI, copy the event graph from the TestUI into yours and adjust the On Pressed events.
 
 ## Troubleshooting
