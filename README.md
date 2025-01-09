@@ -20,14 +20,14 @@ A separate OSC client has to be created for each receiving OSC server. For a loc
 
 #### Send headrotations
 
-When called, this function receives an OSCClient as a target and three OSC addresses, one for each rotaion variable. The addresses must match the addresses expected by the IEM plugin, as this is used to assign the variables. The corresponding addresses can be found in the [IEM documentation](https://plugins.iem.at/docs/osc/).
+When called, this function receives an OSCClient as a target and three OSC addresses, one for each rotation variable. The addresses must match the addresses expected by the IEM plugin, as this is used to assign the variables. The corresponding addresses can be found in the [IEM documentation](https://plugins.iem.at/docs/osc/).
 Furthermore, the camera rotations are converted into yaw, pitch and roll angle and the individual values are appended as argument to the corresponding address (see image).
 
 <p float="center">
   <img src="/Doc/Unreal_send_coordinat.png" width="500" />
 </p>
 
-Unreal and reaper use different coordinate systems. Unreal a left-handed one and reaper a right-handed one, both with the Z vector upwards. In addition, the default viewing direction in unreal is in the negative x direction. Therefore the y-axis has not to be flipped and onlay the yaw angle is rotated by 180 and normalized to -180 to 180 again (see image).
+Unreal and reaper use [different coordinate systems](https://techarthub.com/a-practical-guide-to-unreal-engines-coordinate-system/). Unreal a left-handed one and reaper a right-handed one, both with the Z vector upwards. In addition, the default viewing direction in unreal is in the negative X direction. Therefore, the y-axis has not to be flipped and only the yaw angle is rotated by 180 and normalized to -180 to 180 again (see image).
 
 <p float="center">
   <img src="/Doc/Unreal_yaw_rotation.png" width="500" />
@@ -56,6 +56,7 @@ To be able to play a desired number of tracks exclusively, create new user-defin
   <img src="/Doc/Reaper_custom_action.png" width="500" />
 </p>
 
+Then click *add shortcut* and send the OSCMessage. This is now recognized by reaper as a “hotkey” for the action.
 
 #### IEM plugin
 
